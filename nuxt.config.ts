@@ -22,4 +22,23 @@ export default defineNuxtConfig({
       ],
     },
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler"
+        }
+      }
+    }
+  },
+  components: {
+    dirs: [
+      {
+        path: '~/components',
+        extensions: ['vue'],
+        pathPrefix: false,
+        level: 3,
+      },
+    ],
+  },
 })
